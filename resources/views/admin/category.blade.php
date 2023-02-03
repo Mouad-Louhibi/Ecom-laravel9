@@ -15,6 +15,13 @@
         .input_color{
             color: black;
         }
+        .center{
+            margin: auto;
+            width: 50%;
+            text-align: center;
+            margin-top: 30px;
+            border: 3px solid white;
+        }
     </style>
   </head>
   <body>
@@ -44,6 +51,18 @@
                         <input type="submit" name="submit" calss="btn btn-primary" value="Add Category">
                     </form>
                 </div>
+                <table class="center">
+                    <tr>
+                        <td>Category Name</td>
+                        <td>Action</td>
+                    </tr>
+                    <tr>
+                        <td>Toys</td>
+                        <td>
+                            <a class="btn btn-danger" href="">Delete</a>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     <!-- container-scroller -->
