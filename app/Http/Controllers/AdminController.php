@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function view_category(){
-        return view('admin.category');
+        $data = Category::all();
+        return view('admin.category', compact('data'));
     }
 
     public function add_category(Request $request){
@@ -18,7 +19,9 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Category Added Successfully');
     }
 
-//     public function delete_category(){
-//         $data = new Category();
-//     }
+    public function delete_category($id){
+        $data = category::find($id);
+        $data->delete();
+        return redirect()->back()->with('message', 'Category Deleted Successfully');
+    }
 }
